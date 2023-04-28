@@ -62,9 +62,7 @@ COPY share/pymoveit2_demos $WORKSPACE/src/pymoveit2_demos
 ## Fetch git repos
 
 RUN git clone https://github.com/mcbed/franka_ros2.git -b humble franka_ros2
-
 RUN git clone https://github.com/fzi-forschungszentrum-informatik/cartesian_controllers.git -b ros2
-
 RUN git clone https://github.com/AndrejOrsula/pymoveit2.git
 
 RUN apt-get -y update && apt install -y ros-humble-ament-cmake-clang-format ros-humble-moveit-msgs ros-humble-joint-state-publisher ros-humble-joint-state-broadcaster ros-humble-controller-manager ros-humble-moveit-ros-move-group ros-humble-moveit-kinematics ros-humble-moveit-planners-ompl ros-humble-moveit-ros-visualization ros-humble-xacro ros-humble-joint-trajectory-controller ros-humble-hardware-interface ros-humble-joint-state-publisher-gui ros-humble-controller-interface ros-humble-ros-ign-gazebo ros-humble-controller-manager-msgs ros-humble-ign-ros2-control ros-humble-moveit-servo ros-humble-moveit ros-humble-ros-ign-bridge
@@ -73,9 +71,11 @@ RUN apt-get -y update && apt install -y ros-humble-ament-cmake-clang-format ros-
 # https://github.com/ros-planning/warehouse_ros_mongo/issues/71
 #### RUN apt-get -y update && apt install -y ros-humble-warehouse-ros-mongo
 
+# Download extra models
 
-WORKDIR $WORKSPACE
-## RUN chmod 777 -R .
+WORKDIR $LIBSDIR
+
+RUN git clone https://github.com/justagist/mujoco_panda.git
 
 SHELL ["/bin/bash", "-c"]
 
