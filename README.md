@@ -1,6 +1,6 @@
-# ros2-humble-lite
+# ros2-humble-franka-mujoco
 
-A Docker image with ROS2 Humble, MoveIT and pymoveit2, for demo development purposes. Uses [pymoveit2](https://github.com/AndrejOrsula/pymoveit2) and some modified configs from [panda_ign_moveit2](https://github.com/AndrejOrsula/panda_ign_moveit2).
+A Docker image with ROS2 Humble, MoveIT and pymoveit2, [franka_ros2](https://support.franka.de/docs/franka_ros2.html) and [cartesian_controllers](https://github.com/fzi-forschungszentrum-informatik/cartesian_controllers/tree/ros2) for demo development purposes. Uses [pymoveit2](https://github.com/AndrejOrsula/pymoveit2) and some modified configs from [panda_ign_moveit2](https://github.com/AndrejOrsula/panda_ign_moveit2).
 
 ## Usage
 
