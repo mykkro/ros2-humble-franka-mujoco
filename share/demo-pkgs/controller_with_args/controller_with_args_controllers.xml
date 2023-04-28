@@ -1,0 +1,10 @@
+<library path="controllers_with_args">
+    <class name="MyController"
+           type="MyController" base_class_type="controller_interface::ControllerInterface">
+        <description>
+            Dummy controller.
+        </description>
+    </class>
+   
+</library>
+
